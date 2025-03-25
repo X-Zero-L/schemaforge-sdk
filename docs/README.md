@@ -32,4 +32,4 @@ If you encounter any issues or have questions, please check the documentation fi
 
 ## License
 
-SchemaForge SDK is available under [license terms]. 
+SchemaForge SDK is available under MIT. 
