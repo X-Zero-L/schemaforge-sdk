@@ -29,7 +29,7 @@ setup(
     author_email="info@schemaforge.ai",
     url="https://github.com/X-Zero-L/schemaforge-sdk",
     packages=find_packages(exclude=["tests", "tests.*"]),
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     install_requires=[
         "requests>=2.25.0",
         "pydantic>=2.0.0",

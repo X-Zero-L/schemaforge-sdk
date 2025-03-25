@@ -1,14 +1,14 @@
 Metadata-Version: 2.4
 Name: schemaforge
-Version: 0.1.0
+Version: 0.1.1
 Summary: SchemaForge Python SDK
 Home-page: https://github.com/X-Zero-L/schemaforge-sdk
 Author: SchemaForge Team
 Author-email: info@schemaforge.ai
-Requires-Python: >=3.8
+Requires-Python: >=3.9
 Description-Content-Type: text/markdown
 Requires-Dist: aiohttp>=3.11.14
-Requires-Dist: pydantic>=2.10.6
+Requires-Dist: pydantic[all,email]>=2.10.6
 Requires-Dist: requests>=2.32.3
 Requires-Dist: setuptools>=78.0.2
 Dynamic: author
@@ -23,7 +23,7 @@ Dynamic: requires-python
     <strong>AI-Powered Data Structuring Tool</strong>
   </p>
   <p>
-    <a href="https://github.com/X-Zero-L/schemaforge-ai"><strong>GitHub</strong></a> ·
+    <a href="https://github.com/X-Zero-L/schemaforge-sdk"><strong>GitHub</strong></a> ·
     <a href="https://github.com/X-Zero-L/schemaforge-sdk/docs"><strong>Documentation</strong></a> ·
     <a href="https://github.com/X-Zero-L/schemaforge-sdk"><strong>Website</strong></a>
   </p>
