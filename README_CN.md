@@ -57,4 +57,4 @@ print(person.model_dump())
 
 ## 文档
 
-查看[完整文档](https://github.com/X-Zero-L/schemaforge-sdk/docs)了解详细示例和API参考。 
+查看[完整文档](https://github.com/X-Zero-L/schemaforge-sdk/tree/master/docs)了解详细示例和API参考。 

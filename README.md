@@ -57,4 +57,4 @@ print(person.model_dump())
 
 ## Documentation
 
-See the [complete documentation](https://github.com/X-Zero-L/schemaforge-sdk/docs) for detailed examples and API reference. 
+See the [complete documentation](https://github.com/X-Zero-L/schemaforge-sdk/tree/master/docs) for detailed examples and API reference. 
