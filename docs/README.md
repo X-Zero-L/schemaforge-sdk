@@ -4,18 +4,8 @@ This directory contains detailed documentation for the SchemaForge SDK.
 
 ## Contents
 
-- [Installation](installation.md)
 - [Getting Started](getting_started.md)
-- [Core Concepts](core_concepts.md)
 - [API Reference](api_reference.md)
-- [Examples](examples/README.md)
-  - [Text Structuring](examples/text_structuring.md)
-  - [Model Generation](examples/model_generation.md)
-  - [Working with Complex Models](examples/complex_models.md)
-  - [Async Operations](examples/async_operations.md)
-- [Advanced Usage](advanced_usage.md)
-- [Error Handling](error_handling.md)
-- [FAQ](faq.md)
 
 ## Quick Navigation
 
@@ -23,13 +13,6 @@ This directory contains detailed documentation for the SchemaForge SDK.
 
 - [Structuring Text Data](examples/text_structuring.md)
 - [Generating Models from Text](examples/model_generation.md)
-
-### Advanced Topics
-
-- [Custom Configurations](advanced_usage.md#custom-configurations)
-- [Working with Multiple Models](examples/complex_models.md)
-- [Asynchronous Operations](examples/async_operations.md)
-- [Error Handling Strategies](error_handling.md)
 
 ## Example Usage
 
