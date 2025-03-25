@@ -6,7 +6,7 @@
   </p>
   <p>
     <a href="https://github.com/X-Zero-L/schemaforge-sdk"><strong>GitHub</strong></a> ·
-    <a href="https://github.com/X-Zero-L/schemaforge-sdk/docs"><strong>Documentation</strong></a> ·
+    <a href="https://github.com/X-Zero-L/schemaforge-sdk/tree/master/docs"><strong>Documentation</strong></a> ·
     <a href="https://github.com/X-Zero-L/schemaforge-sdk"><strong>Website</strong></a>
   </p>
 </div>
@@ -30,7 +30,7 @@ from pydantic import BaseModel
 from schemaforge import SchemaForge
 
 # Initialize client
-client = SchemaForge(api_key="your_secure_api_key_here")
+client = SchemaForge(api_key="your_secure_api_key_here", api_base="http://localhost:8000", default_model="openai:o3-mini")
 
 # Define a Pydantic model
 class Person(BaseModel):

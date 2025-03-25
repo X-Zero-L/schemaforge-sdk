@@ -6,7 +6,7 @@
   </p>
   <p>
     <a href="https://github.com/X-Zero-L/schemaforge-ai"><strong>GitHub</strong></a> ·
-    <a href="https://github.com/X-Zero-L/schemaforge-sdk/docs"><strong>文档</strong></a> ·
+    <a href="https://github.com/X-Zero-L/schemaforge-sdk/tree/master/docs"><strong>文档</strong></a> ·
     <a href="https://github.com/X-Zero-L/schemaforge-sdk"><strong>官网</strong></a>
   </p>
 </div>
@@ -30,7 +30,7 @@ from pydantic import BaseModel
 from schemaforge import SchemaForge
 
 # 初始化客户端
-client = SchemaForge(api_key="your_secure_api_key_here")
+client = SchemaForge(api_key="your_secure_api_key_here", api_base="http://localhost:8000", default_model="openai:o3-mini")
 
 # 定义Pydantic模型
 class Person(BaseModel):
