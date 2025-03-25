@@ -5,9 +5,9 @@
     <strong>AI-Powered Data Structuring Tool</strong>
   </p>
   <p>
-    <a href="https://github.com/X-Zero-L/schemaforge-ai"><strong>GitHub</strong></a> ·
-    <a href="https://schemaforge.ai/docs"><strong>Documentation</strong></a> ·
-    <a href="https://schemaforge.ai"><strong>Website</strong></a>
+    <a href="https://github.com/X-Zero-L/schemaforge-sdk"><strong>GitHub</strong></a> ·
+    <a href="https://github.com/X-Zero-L/schemaforge-sdk/docs"><strong>Documentation</strong></a> ·
+    <a href="https://github.com/X-Zero-L/schemaforge-sdk"><strong>Website</strong></a>
   </p>
 </div>
 
@@ -168,4 +168,4 @@ except SchemaForgeError as e:
 
 ## Further Reading
 
-For complete API documentation and more examples, visit the [SchemaForge Documentation](https://schemaforge.ai/docs). 
+For complete API documentation and more examples, visit the [SchemaForge Documentation](https://github.com/X-Zero-L/schemaforge-sdk/docs). 

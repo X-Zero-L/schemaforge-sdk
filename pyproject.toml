@@ -1,6 +1,6 @@
 [project]
-name = "schemaforge-sdk"
-version = "0.1.0"
+name = "schemaforge"
+version = "0.1.1"
 description = "SchemaForge Python SDK"
 readme = "README.md"
 requires-python = ">=3.9"

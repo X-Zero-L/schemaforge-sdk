@@ -6,8 +6,8 @@
   </p>
   <p>
     <a href="https://github.com/X-Zero-L/schemaforge-ai"><strong>GitHub</strong></a> ·
-    <a href="https://schemaforge.ai/docs"><strong>文档</strong></a> ·
-    <a href="https://schemaforge.ai"><strong>官网</strong></a>
+    <a href="https://github.com/X-Zero-L/schemaforge-sdk/docs"><strong>文档</strong></a> ·
+    <a href="https://github.com/X-Zero-L/schemaforge-sdk"><strong>官网</strong></a>
   </p>
 </div>
 
@@ -168,4 +168,4 @@ except SchemaForgeError as e:
 
 ## 进一步阅读
 
-有关完整的API文档和更多示例，请访问[SchemaForge文档](https://schemaforge.ai/docs)。 
+有关完整的API文档和更多示例，请访问[SchemaForge文档](https://github.com/X-Zero-L/schemaforge-sdk/docs)。 
