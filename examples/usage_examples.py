@@ -14,7 +14,7 @@ def main():
     client = SchemaForge(
         api_key="your_secure_api_key_here",
         api_base="http://localhost:8000",
-        default_model="openai:gpt-4o",
+        default_model="openai:o3-mini",
     )
 
     # Example 1: Structure text using predefined model
