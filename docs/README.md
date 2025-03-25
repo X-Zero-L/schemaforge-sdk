@@ -1,61 +1,35 @@
 # SchemaForge SDK Documentation
 
-This directory contains detailed documentation for the SchemaForge SDK.
+Welcome to the SchemaForge SDK documentation! This SDK provides powerful tools for converting unstructured text data into structured Pydantic models and generating data models from sample content.
 
-## Contents
+## Table of Contents
 
 - [Getting Started](getting_started.md)
 - [API Reference](api_reference.md)
+- [Asynchronous Operations](async_operations.md)
+- [Custom Configuration](custom_configuration.md)
 
-## Quick Navigation
+## Examples
 
-### Basic Functionality
+The `examples` directory contains sample code demonstrating various capabilities:
 
-- [Structuring Text Data](examples/text_structuring.md)
-- [Generating Models from Text](examples/model_generation.md)
+- [Basic Usage Examples](../examples/usage_examples.py)
+- [Asynchronous Examples](../examples/async_examples.py)
+- [Advanced Configuration Examples](../examples/advanced_configuration.py)
 
-## Example Usage
+## Features
 
-Here are some quick examples of using the SchemaForge SDK:
+SchemaForge SDK offers the following key features:
 
-### Text Structuring
+1. **Text Structuring** - Convert unstructured text into structured Pydantic models
+2. **Model Generation** - Create Pydantic models from sample data automatically
+3. **Async Support** - Perform operations asynchronously for improved throughput
+4. **Custom Configuration** - Fine-tune behavior with extensive configuration options
 
-```python
-from pydantic import BaseModel
-from schemaforge import SchemaForge
+## Support
 
-client = SchemaForge(api_key="your_secure_api_key_here")
+If you encounter any issues or have questions, please check the documentation first or submit an issue on the GitHub repository.
 
-class Person(BaseModel):
-    name: str
-    age: int
-    occupation: str
-    email: str
+## License
 
-person = client.structure(
-    content="John is a 30-year-old software engineer with email john@example.com",
-    model_class=Person
-)
-print(person.model_dump())
-```
-
-### Model Generation
-
-```python
-sample_data = """
-This is a smart watch product, model number P12345, priced at $199.99, currently in stock.
-The watch features a 6.5-inch display, SnapDragon 8 processor, 128GB storage, and a 48MP camera.
-The product is available in Black, Silver, and Gold colors, officially released on January 15, 2024.
-"""
-
-response = client.generate_model(
-    sample_data=sample_data,
-    model_name="Product",
-    description="Product information model with specifications"
-)
-
-# Get all generated models
-models = client.load_generated_model(response)
-```
-
-For more detailed information, check out the specific documentation sections. 
+SchemaForge SDK is available under [license terms]. 

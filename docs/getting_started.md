@@ -88,6 +88,6 @@ if response.success:
 
 ## Next Steps
 
-- Learn about [working with complex models](examples/complex_models.md)
-- Explore [asynchronous operations](examples/async_operations.md)
+- Explore [asynchronous operations](async_operations.md) for improved performance
+- Learn about [custom configuration options](custom_configuration.md) for advanced usage
 - See the [API reference](api_reference.md) for detailed method documentation 
