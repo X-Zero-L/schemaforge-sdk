@@ -1,0 +1,12 @@
+[project]
+name = "schemaforge-sdk"
+version = "0.1.0"
+description = "SchemaForge Python SDK"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "aiohttp>=3.11.14",
+    "pydantic[all,email]>=2.10.6",
+    "requests>=2.32.3",
+    "setuptools>=78.0.2",
+]

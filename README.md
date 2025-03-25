@@ -1,0 +1,171 @@
+# SchemaForge Python SDK
+
+<div align="center">
+  <p>
+    <strong>AI-Powered Data Structuring Tool</strong>
+  </p>
+  <p>
+    <a href="https://github.com/X-Zero-L/schemaforge-ai"><strong>GitHub</strong></a> ·
+    <a href="https://schemaforge.ai/docs"><strong>Documentation</strong></a> ·
+    <a href="https://schemaforge.ai"><strong>Website</strong></a>
+  </p>
+</div>
+
+English | [中文](./README_CN.md)
+
+## About
+
+This is the official Python SDK for [SchemaForge AI](https://github.com/X-Zero-L/schemaforge-ai), a unified service for AI structured data processing using Pydantic models to define output formats, supporting multiple AI large language models.
+
+## Introduction
+
+SchemaForge is a powerful Python SDK for quickly transforming unstructured data into structured formats and generating Pydantic models from text descriptions. It provides an intuitive API for:
+
+- **Structuring text data**: Convert unstructured text into structured Pydantic models
+- **Generating models from sample data**: Create Pydantic models based on sample data
+- **Async support**: All operations support both synchronous and asynchronous calls
+
+## Installation
+
+```bash
+pip install schemaforge
+```
+
+## Quick Start
+
+### Initialize Client
+
+```python
+from schemaforge import SchemaForge
+
+# Initialize client with API key
+client = SchemaForge(api_key="your_secure_api_key_here")
+
+# Or get API key from environment variable
+# export SCHEMAFORGE_API_KEY=your_secure_api_key_here
+client = SchemaForge()
+```
+
+### Structure Text Data
+
+```python
+from pydantic import BaseModel
+
+# Define a Pydantic model
+class Person(BaseModel):
+    name: str
+    age: int
+    occupation: str
+
+# Structure text using the model
+person = client.structure(
+    content="John is a 30-year-old software engineer",
+    model_class=Person
+)
+print(person)
+```
+
+### Generate Model from Sample Data
+
+```python
+# Sample JSON data
+json_sample = '''
+{
+    "product_id": "P12345",
+    "name": "Smart Watch",
+    "price": 199.99,
+    "in_stock": true,
+    "specifications": {
+        "screen_size": "6.5 inches",
+        "processor": "SnapDragon 8",
+        "storage": "128GB",
+        "camera": "48MP"
+    },
+    "colors": ["Black", "Silver", "Gold"],
+    "release_date": "2024-01-15"
+}
+'''
+
+# Generate model from sample data
+result = client.generate_model(
+    sample_data=json_sample,
+    model_name="Product",
+    description="Product information model with specifications"
+)
+
+if result.get("success"):
+    # Load the generated model
+    Product = client.load_model(result["model_code"])
+    print(Product)
+```
+
+### Async Support
+
+```python
+import asyncio
+from schemaforge import SchemaForge
+
+async def main():
+    client = SchemaForge(api_key="your_secure_api_key_here")
+    
+    # Async structure text
+    person = await client.astructure(
+        content="Jane is a 25-year-old data scientist",
+        model_class=Person
+    )
+    print(person)
+    
+    # Async generate model
+    result = await client.agenerate_model(
+        sample_data='{"name": "Laptop", "price": 999.99}',
+        model_name="Laptop",
+        description="Laptop information model"
+    )
+    
+    if result.get("success"):
+        Laptop = client.load_model(result["model_code"])
+        print(Laptop)
+
+asyncio.run(main())
+```
+
+## Advanced Usage
+
+### Custom Configuration
+
+```python
+from schemaforge import SchemaForge
+
+# Create client with custom configuration
+client = SchemaForge(
+    api_key="your_secure_api_key_here",
+    api_base="https://custom-endpoint.schemaforge.ai",
+    default_model="gpt-4",
+    timeout=60.0,
+    max_retries=3,
+    retry_delay=1.0,
+    retry_jitter=True,
+    verbose=True
+)
+```
+
+### Error Handling
+
+```python
+from schemaforge import SchemaForge
+from schemaforge.exceptions.api_error import SchemaForgeError
+
+client = SchemaForge(api_key="your_secure_api_key_here")
+
+try:
+    person = client.structure(
+        content="Invalid text",
+        model_class=Person
+    )
+except SchemaForgeError as e:
+    print(f"Error: {e}")
+```
+
+## Further Reading
+
+For complete API documentation and more examples, visit the [SchemaForge Documentation](https://schemaforge.ai/docs). 
